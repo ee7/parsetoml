@@ -11,10 +11,6 @@
 <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA=="/>
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QQQEwksSS9ZWwAAAk1JREFUWMPtll2ITVEUx39nn/O7Y5qR8f05wtCUUr6ZIS++8pEnkZInPImneaCQ5METNdOkeFBKUhMPRIkHKfEuUZSUlGlKPN2TrgfncpvmnntnmlEyq1Z7t89/rf9a6+y99oZxGZf/XeIq61EdtgKXgdXA0xrYAvBjOIF1AI9zvjcC74BSpndrJPkBWDScTF8Aa4E3wDlgHbASaANmVqlcCnwHvgDvgVfAJ+AikAAvgfVZwLnSVZHZaOuKoQi3ZOMi4NkYkpe1p4J7A8BpYAD49hfIy/oqG0+hLomiKP2L5L+1ubn5115S+3OAn4EnwBlgMzCjyt6ZAnQCJ4A7wOs88iRJHvw50HoujuPBoCKwHWiosy8MdfZnAdcHk8dxXFJ3VQbQlCTJvRBCGdRbD4M6uc5glpY3eAihpN5S5w12diSEcCCEcKUO4ljdr15T76ur1FDDLIQQ3qv71EdDOe3Kxj3leRXyk+pxdWnFWod6Wt2bY3de3aSuUHcPBVimHs7mK9WrmeOF6lR1o9qnzskh2ar2qm1qizpfXaPeVGdlmGN5pb09qMxz1Xb1kLqgzn1RyH7JUXW52lr5e/Kqi9qpto7V1atuUzfnARrV7jEib1T76gG2qxdGmXyiekkt1GswPTtek0aBfJp6YySGBfWg2tPQ0FAYgf1stUfdmdcjarbYJEniKIq6gY/Aw+zWHAC+p2labGpqiorFYgGYCEzN7oQdQClN07O1/EfDyGgC0ALMBdYAi4FyK+4H3gLPsxfR1zRNi+NP7nH5J+QntnXe5B5mpfQAAAAASUVORK5CYII=">
 
-<!-- Google fonts -->
-<link href='https://fonts.googleapis.com/css?family=Lato:400,600,900' rel='stylesheet' type='text/css'/>
-<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
-
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="nimdoc.out.css">
 
@@ -27,16 +23,17 @@
       <h1 class="title">src/parsetoml</h1>
       <div class="row">
   <div class="three columns">
-    <div class="theme-switch-wrapper">
-      <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider round"></div>
-      </label>
-      &nbsp;&nbsp;&nbsp; <em>Dark Mode</em>
+    <div class="theme-select-wrapper">
+      <label for="theme-select">Theme:&nbsp;</label>
+      <select id="theme-select" onchange="setTheme(this.value)">
+        <option value="auto">🌗 Match OS</option>
+        <option value="dark">🌑 Dark</option>
+        <option value="light">🌕 Light</option>
+      </select>
     </div>
     <div id="global-links">
       <ul class="simple">
-        <li><a href="theindex.html">Index</a></li>
+        <li><a id="indexLink" href="theindex.html">Index</a></li>
       </ul>
     </div>
     <div id="searchInputDiv">
@@ -64,16 +61,8 @@
   day*: int">TomlDate</a></li>
 <li><a class="reference" href="#TomlDateTime" title="TomlDateTime = object
   date*: TomlDate
-  time*: TomlTime
-  case shift*: bool
-  of true:
-      isShiftPositive*: bool
-      zoneHourShift*: int
-      zoneMinuteShift*: int
-
-  of false:
-    nil">TomlDateTime</a></li>
-<li><a class="reference" href="#TomlError" title="TomlError = object of Defect
+  time*: TomlTime">TomlDateTime</a></li>
+<li><a class="reference" href="#TomlError" title="TomlError = object of ValueError
   location*: ParserState">TomlError</a></li>
 <li><a class="reference" href="#TomlTable" title="TomlTable = OrderedTable[string, TomlValueRef]">TomlTable</a></li>
 <li><a class="reference" href="#TomlTableRef" title="TomlTableRef = ref TomlTable">TomlTableRef</a></li>
@@ -82,30 +71,7 @@
   minute*: int
   second*: int
   subsecond*: int">TomlTime</a></li>
-<li><a class="reference" href="#TomlValue" title="TomlValue = object
-  case kind*: TomlValueKind
-  of TomlValueKind.None:
-    nil
-  of TomlValueKind.Int:
-    intVal*: int64
-  of TomlValueKind.Float:
-      floatVal*: float64
-      forcedSign*: Sign
-
-  of TomlValueKind.Bool:
-    boolVal*: bool
-  of TomlValueKind.Datetime:
-    dateTimeVal*: TomlDateTime
-  of TomlValueKind.Date:
-    dateVal*: TomlDate
-  of TomlValueKind.Time:
-    timeVal*: TomlTime
-  of TomlValueKind.String:
-    stringVal*: string
-  of TomlValueKind.Array:
-    arrayVal*: seq[TomlValueRef]
-  of TomlValueKind.Table:
-    tableVal*: TomlTableRef">TomlValue</a></li>
+<li><a class="reference" href="#TomlValue" title="TomlValue = object">TomlValue</a></li>
 <li><a class="reference" href="#TomlValueKind" title="TomlValueKind {.pure.} = enum
   None, Int, Float, Bool, Datetime, Date, Time, String, Array, Table">TomlValueKind</a></li>
 <li><a class="reference" href="#TomlValueRef" title="TomlValueRef = ref TomlValue">TomlValueRef</a></li>
@@ -362,15 +328,7 @@
   <dt><pre><a href="index.html#TomlDateTime"><span class="Identifier">TomlDateTime</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">date</span><span class="Operator">*</span><span class="Other">:</span> <a href="index.html#TomlDate"><span class="Identifier">TomlDate</span></a>
   <span class="Identifier">time</span><span class="Operator">*</span><span class="Other">:</span> <a href="index.html#TomlTime"><span class="Identifier">TomlTime</span></a>
-  <span class="Keyword">case</span> <span class="Identifier">shift</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
-  <span class="Keyword">of</span> <span class="Identifier">true</span><span class="Other">:</span>
-      <span class="Identifier">isShiftPositive</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
-      <span class="Identifier">zoneHourShift</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">int</span>
-      <span class="Identifier">zoneMinuteShift</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">int</span>
-
-  <span class="Keyword">of</span> <span class="Identifier">false</span><span class="Other">:</span>
-    <span class="Keyword">nil</span>
-  </pre></dt>
+</pre></dt>
   <dd>
     
     
@@ -378,7 +336,7 @@
   </dd>
 </div>
 <div id="TomlError">
-  <dt><pre><a href="index.html#TomlError"><span class="Identifier">TomlError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">Defect</span>
+  <dt><pre><a href="index.html#TomlError"><span class="Identifier">TomlError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">ValueError</span>
   <span class="Identifier">location</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">ParserState</span>
 </pre></dt>
   <dd>
@@ -418,29 +376,6 @@
 </div>
 <div id="TomlValue">
   <dt><pre><a href="index.html#TomlValue"><span class="Identifier">TomlValue</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Keyword">case</span> <span class="Identifier">kind</span><span class="Operator">*</span><span class="Other">:</span> <a href="index.html#TomlValueKind"><span class="Identifier">TomlValueKind</span></a>
-  <span class="Keyword">of</span> <span class="Identifier">TomlValueKind</span><span class="Other">.</span><span class="Identifier">None</span><span class="Other">:</span>
-    <span class="Keyword">nil</span>
-  <span class="Keyword">of</span> <span class="Identifier">TomlValueKind</span><span class="Other">.</span><span class="Identifier">Int</span><span class="Other">:</span>
-    <span class="Identifier">intVal</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">int64</span>
-  <span class="Keyword">of</span> <span class="Identifier">TomlValueKind</span><span class="Other">.</span><span class="Identifier">Float</span><span class="Other">:</span>
-      <span class="Identifier">floatVal</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">float64</span>
-      <span class="Identifier">forcedSign</span><span class="Operator">*</span><span class="Other">:</span> <a href="index.html#Sign"><span class="Identifier">Sign</span></a>
-
-  <span class="Keyword">of</span> <span class="Identifier">TomlValueKind</span><span class="Other">.</span><span class="Identifier">Bool</span><span class="Other">:</span>
-    <span class="Identifier">boolVal</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">bool</span>
-  <span class="Keyword">of</span> <span class="Identifier">TomlValueKind</span><span class="Other">.</span><span class="Identifier">Datetime</span><span class="Other">:</span>
-    <span class="Identifier">dateTimeVal</span><span class="Operator">*</span><span class="Other">:</span> <a href="index.html#TomlDateTime"><span class="Identifier">TomlDateTime</span></a>
-  <span class="Keyword">of</span> <span class="Identifier">TomlValueKind</span><span class="Other">.</span><span class="Identifier">Date</span><span class="Other">:</span>
-    <span class="Identifier">dateVal</span><span class="Operator">*</span><span class="Other">:</span> <a href="index.html#TomlDate"><span class="Identifier">TomlDate</span></a>
-  <span class="Keyword">of</span> <span class="Identifier">TomlValueKind</span><span class="Other">.</span><span class="Identifier">Time</span><span class="Other">:</span>
-    <span class="Identifier">timeVal</span><span class="Operator">*</span><span class="Other">:</span> <a href="index.html#TomlTime"><span class="Identifier">TomlTime</span></a>
-  <span class="Keyword">of</span> <span class="Identifier">TomlValueKind</span><span class="Other">.</span><span class="Identifier">String</span><span class="Other">:</span>
-    <span class="Identifier">stringVal</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">string</span>
-  <span class="Keyword">of</span> <span class="Identifier">TomlValueKind</span><span class="Other">.</span><span class="Identifier">Array</span><span class="Other">:</span>
-    <span class="Identifier">arrayVal</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">]</span>
-  <span class="Keyword">of</span> <span class="Identifier">TomlValueKind</span><span class="Other">.</span><span class="Identifier">Table</span><span class="Other">:</span>
-    <span class="Identifier">tableVal</span><span class="Operator">*</span><span class="Other">:</span> <a href="index.html#TomlTableRef"><span class="Identifier">TomlTableRef</span></a>
   </pre></dt>
   <dd>
     
@@ -473,7 +408,7 @@
   <dl class="item">
     <div id="$-procs-all">
   <div id="$,TomlDate">
-  <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CTomlDate"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlDate"><span class="Identifier">TomlDate</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CTomlDate"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlDate"><span class="Identifier">TomlDate</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Converts the TOML date object into the ISO format read by the parser
@@ -481,7 +416,7 @@
   </dd>
 </div>
 <div id="$,TomlDateTime">
-  <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CTomlDateTime"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlDateTime"><span class="Identifier">TomlDateTime</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CTomlDateTime"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlDateTime"><span class="Identifier">TomlDateTime</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Converts the TOML date-time object into the ISO format read by the parser
@@ -489,7 +424,7 @@
   </dd>
 </div>
 <div id="$,TomlTime">
-  <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CTomlTime"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlTime"><span class="Identifier">TomlTime</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CTomlTime"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlTime"><span class="Identifier">TomlTime</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Converts the TOML time object into the ISO format read by the parser
@@ -497,7 +432,7 @@
   </dd>
 </div>
 <div id="$,TomlValue">
-  <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CTomlValue"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlValue"><span class="Identifier">TomlValue</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CTomlValue"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlValue"><span class="Identifier">TomlValue</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Turns whatever value into a type and value representation, used by <tt class="docutils literal"><span class="pre">dump</span></tt>
@@ -506,7 +441,7 @@
 </div>
 <div id="$,TomlValueRef">
   <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CTomlValueRef"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
-                                      </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+                                      <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Turns whatever value into a regular Nim value representtation
@@ -517,7 +452,8 @@
 </div>
 <div id="==-procs-all">
   <div id="==,TomlValueRef,TomlValueRef">
-  <dt><pre><span class="Keyword">proc</span> <a href="#%3D%3D%2CTomlValueRef%2CTomlValueRef"><span class="Identifier">`==`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">func</span> <a href="#%3D%3D%2CTomlValueRef%2CTomlValueRef"><span class="Identifier">`==`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span>
+                                      <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Check two nodes for equality
@@ -528,7 +464,7 @@
 </div>
 <div id="?-procs-all">
   <div id="?,bool">
-  <dt><pre><span class="Keyword">proc</span> <a href="#%3F%2Cbool"><span class="Identifier">`?`</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#%3F%2Cbool"><span class="Identifier">`?`</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Generic constructor for TOML data. Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Bool</span> <span class="Identifier">TomlValueRef</span></span></tt>.
@@ -537,7 +473,7 @@
 </div>
 <div id="?,openArray[tuple[string,TomlValueRef]]">
   <dt><pre><span class="Keyword">proc</span> <a href="#%3F%2CopenArray%5Btuple%5Bstring%2CTomlValueRef%5D%5D"><span class="Identifier">`?`</span></a><span class="Other">(</span><span class="Identifier">keyVals</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">,</span> <span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">]</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Generic constructor for TOML data. Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Table</span> <span class="Identifier">TomlValueRef</span></span></tt>
@@ -545,7 +481,7 @@
   </dd>
 </div>
 <div id="?,float">
-  <dt><pre><span class="Keyword">proc</span> <a href="#%3F%2Cfloat"><span class="Identifier">`?`</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#%3F%2Cfloat"><span class="Identifier">`?`</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Generic constructor for TOML data. Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Float</span> <span class="Identifier">TomlValueRef</span></span></tt>.
@@ -553,7 +489,7 @@
   </dd>
 </div>
 <div id="?,int64">
-  <dt><pre><span class="Keyword">proc</span> <a href="#%3F%2Cint64"><span class="Identifier">`?`</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">int64</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#%3F%2Cint64"><span class="Identifier">`?`</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">int64</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Generic constructor for TOML data. Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Int</span> <span class="Identifier">TomlValueRef</span></span></tt>.
@@ -585,7 +521,7 @@
   </dd>
 </div>
 <div id="?,string">
-  <dt><pre><span class="Keyword">proc</span> <a href="#%3F%2Cstring"><span class="Identifier">`?`</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#%3F%2Cstring"><span class="Identifier">`?`</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Generic constructor for TOML data. Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">String</span> <span class="Identifier">TomlValueRef</span></span></tt>.
@@ -605,7 +541,7 @@
 <div id="[]-procs-all">
   <div id="[],TomlValueRef,int">
   <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2CTomlValueRef%2Cint"><span class="Identifier">`[]`</span></a><span class="Other">(</span><span class="Identifier">node</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span class="Identifier">inline</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Gets the node at <tt class="docutils literal"><span class="pre"><span class="Identifier">index</span></span></tt> in an Array. Result is undefined if <tt class="docutils literal"><span class="pre"><span class="Identifier">index</span></span></tt> is out of bounds, but as long as array bound checks are enabled it will result in an exception.
@@ -614,7 +550,7 @@
 </div>
 <div id="[],TomlValueRef,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2CTomlValueRef%2Cstring"><span class="Identifier">`[]`</span></a><span class="Other">(</span><span class="Identifier">node</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span class="Identifier">inline</span><span class="Other">,</span>
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Gets a field from a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Table</span></span></tt>, which must not be nil. If the value at <tt class="docutils literal"><span class="pre"><span class="Identifier">name</span></span></tt> does not exist, raises KeyError.
@@ -626,7 +562,7 @@
 <div id="[]=-procs-all">
   <div id="[]=,TomlValueRef,string,TomlValueRef">
   <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%3D%2CTomlValueRef%2Cstring%2CTomlValueRef"><span class="Identifier">`[]=`</span></a><span class="Other">(</span><span class="Identifier">obj</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span> {.<span class="Identifier">inline</span><span class="Other">,</span>
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Sets a field from a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Table</span></span></tt>.
@@ -637,7 +573,7 @@
 </div>
 <div id="add-procs-all">
   <div id="add,TomlValueRef,TomlValueRef">
-  <dt><pre><span class="Keyword">proc</span> <a href="#add%2CTomlValueRef%2CTomlValueRef"><span class="Identifier">add</span></a><span class="Other">(</span><span class="Identifier">father</span><span class="Other">,</span> <span class="Identifier">child</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#add%2CTomlValueRef%2CTomlValueRef"><span class="Identifier">add</span></a><span class="Other">(</span><span class="Identifier">father</span><span class="Other">,</span> <span class="Identifier">child</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Adds <tt class="docutils literal"><span class="pre"><span class="Identifier">child</span></span></tt> to a TomlValueKind.Array node <tt class="docutils literal"><span class="pre"><span class="Identifier">father</span></span></tt>.
@@ -646,7 +582,7 @@
 </div>
 <div id="add,TomlValueRef,string,TomlValueRef">
   <dt><pre><span class="Keyword">proc</span> <a href="#add%2CTomlValueRef%2Cstring%2CTomlValueRef"><span class="Identifier">add</span></a><span class="Other">(</span><span class="Identifier">obj</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Sets a field from a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Table</span></span></tt>.
@@ -658,7 +594,7 @@
 <div id="contains-procs-all">
   <div id="contains,TomlValueRef,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#contains%2CTomlValueRef%2Cstring"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">node</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Checks if <tt class="docutils literal"><span class="pre"><span class="Identifier">key</span></span></tt> exists in <tt class="docutils literal"><span class="pre"><span class="Identifier">node</span></span></tt>.
@@ -666,8 +602,8 @@
   </dd>
 </div>
 <div id="contains,TomlValueRef,TomlValueRef">
-  <dt><pre><span class="Keyword">proc</span> <a href="#contains%2CTomlValueRef%2CTomlValueRef"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">node</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#contains%2CTomlValueRef%2CTomlValueRef"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">node</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Checks if <tt class="docutils literal"><span class="pre"><span class="Identifier">val</span></span></tt> exists in array <tt class="docutils literal"><span class="pre"><span class="Identifier">node</span></span></tt>.
@@ -678,7 +614,7 @@
 </div>
 <div id="copy-procs-all">
   <div id="copy,TomlValueRef">
-  <dt><pre><span class="Keyword">proc</span> <a href="#copy%2CTomlValueRef"><span class="Identifier">copy</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#copy%2CTomlValueRef"><span class="Identifier">copy</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Performs a deep copy of <tt class="docutils literal"><span class="pre"><span class="Identifier">a</span></span></tt>.
@@ -689,7 +625,7 @@
 </div>
 <div id="delete-procs-all">
   <div id="delete,TomlValueRef,string">
-  <dt><pre><span class="Keyword">proc</span> <a href="#delete%2CTomlValueRef%2Cstring"><span class="Identifier">delete</span></a><span class="Other">(</span><span class="Identifier">obj</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#delete%2CTomlValueRef%2Cstring"><span class="Identifier">delete</span></a><span class="Other">(</span><span class="Identifier">obj</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Deletes <tt class="docutils literal"><span class="pre">obj[key]</span></tt>.
@@ -701,7 +637,7 @@
 <div id="dump-procs-all">
   <div id="dump,TomlTableRef,int">
   <dt><pre><span class="Keyword">proc</span> <a href="#dump%2CTomlTableRef%2Cint"><span class="Identifier">dump</span></a><span class="Other">(</span><span class="Identifier">table</span><span class="Other">:</span> <a href="index.html#TomlTableRef"><span class="Identifier">TomlTableRef</span></a><span class="Other">;</span> <span class="Identifier">indentLevel</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Dump out the entire table as it was parsed. This procedure is mostly useful for debugging purposes
@@ -713,7 +649,7 @@
 <div id="existsKey-procs-all">
   <div id="existsKey,TomlValueRef,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#existsKey%2CTomlValueRef%2Cstring"><span class="Identifier">existsKey</span></a><span class="Other">(</span><span class="Identifier">node</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     <div class="deprecation-message">
   <b>Deprecated</b> 
@@ -728,7 +664,7 @@
 <div id="getBiggestInt-procs-all">
   <div id="getBiggestInt,TomlValueRef,int64">
   <dt><pre><span class="Keyword">proc</span> <a href="#getBiggestInt%2CTomlValueRef%2Cint64"><span class="Identifier">getBiggestInt</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">default</span><span class="Other">:</span> <span class="Identifier">int64</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int64</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <p>Retrieves the int64 value of a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Int</span> <span class="Identifier">TomlValueRef</span></span></tt>.</p>
@@ -742,7 +678,7 @@
 <div id="getBool-procs-all">
   <div id="getBool,TomlValueRef,bool">
   <dt><pre><span class="Keyword">proc</span> <a href="#getBool%2CTomlValueRef%2Cbool"><span class="Identifier">getBool</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">default</span><span class="Other">:</span> <span class="Identifier">bool</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <p>Retrieves the bool value of a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Bool</span> <span class="Identifier">TomlValueRef</span></span></tt>.</p>
@@ -756,7 +692,7 @@
 <div id="getElems-procs-all">
   <div id="getElems,TomlValueRef,seq[TomlValueRef]">
   <dt><pre><span class="Keyword">proc</span> <a href="#getElems%2CTomlValueRef%2Cseq%5BTomlValueRef%5D"><span class="Identifier">getElems</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">default</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">]</span> <span class="Other">=</span> <span class="Operator">@</span><span class="Other">[</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span>
-    <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <p>Retrieves the int value of a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Array</span> <span class="Identifier">TomlValueRef</span></span></tt>.</p>
@@ -770,7 +706,7 @@
 <div id="getFloat-procs-all">
   <div id="getFloat,TomlValueRef,float">
   <dt><pre><span class="Keyword">proc</span> <a href="#getFloat%2CTomlValueRef%2Cfloat"><span class="Identifier">getFloat</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">default</span><span class="Other">:</span> <span class="Identifier">float</span> <span class="Other">=</span> <span class="FloatNumber">0.0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <p>Retrieves the float value of a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Float</span> <span class="Identifier">TomlValueRef</span></span></tt>.</p>
@@ -784,7 +720,7 @@
 <div id="getInt-procs-all">
   <div id="getInt,TomlValueRef,int">
   <dt><pre><span class="Keyword">proc</span> <a href="#getInt%2CTomlValueRef%2Cint"><span class="Identifier">getInt</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">default</span><span class="Other">:</span> <span class="Identifier">int</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <p>Retrieves the int value of a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Int</span> <span class="Identifier">TomlValueRef</span></span></tt>.</p>
@@ -798,7 +734,7 @@
 <div id="getOrDefault-procs-all">
   <div id="getOrDefault,TomlValueRef,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#getOrDefault%2CTomlValueRef%2Cstring"><span class="Identifier">getOrDefault</span></a><span class="Other">(</span><span class="Identifier">node</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Gets a field from a <tt class="docutils literal"><span class="pre"><span class="Identifier">node</span></span></tt>. If <tt class="docutils literal"><span class="pre"><span class="Identifier">node</span></span></tt> is nil or not an object or value at <tt class="docutils literal"><span class="pre"><span class="Identifier">key</span></span></tt> does not exist, returns nil
@@ -810,7 +746,7 @@
 <div id="getStr-procs-all">
   <div id="getStr,TomlValueRef,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#getStr%2CTomlValueRef%2Cstring"><span class="Identifier">getStr</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">default</span><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <p>Retrieves the string value of a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">String</span> <span class="Identifier">TomlValueRef</span></span></tt>.</p>
@@ -824,7 +760,7 @@
 <div id="getTable-procs-all">
   <div id="getTable,TomlValueRef">
   <dt><pre><span class="Keyword">proc</span> <a href="#getTable%2CTomlValueRef"><span class="Identifier">getTable</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">default</span> <span class="Other">=</span> <span class="Identifier">new</span><span class="Other">(</span><a href="index.html#TomlTableRef"><span class="Identifier">TomlTableRef</span></a><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlTableRef"><span class="Identifier">TomlTableRef</span></a> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     <p>Retrieves the key, value pairs of a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Table</span> <span class="Identifier">TomlValueRef</span></span></tt>.</p>
@@ -838,7 +774,7 @@
 <div id="hash-procs-all">
   <div id="hash,OrderedTable[string,TomlValueRef]">
   <dt><pre><span class="Keyword">proc</span> <a href="#hash%2COrderedTable%5Bstring%2CTomlValueRef%5D"><span class="Identifier">hash</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">OrderedTable</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">,</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Hash</span> {.<span class="Identifier">noSideEffect</span><span class="Other">,</span>
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     
@@ -846,8 +782,8 @@
   </dd>
 </div>
 <div id="hash,TomlValueRef">
-  <dt><pre><span class="Keyword">proc</span> <a href="#hash%2CTomlValueRef"><span class="Identifier">hash</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Hash</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
-                                   </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#hash%2CTomlValueRef"><span class="Identifier">hash</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Hash</span> {.<span class="Identifier">noSideEffect</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
+                                   <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Compute the hash for a TOML node
@@ -859,7 +795,7 @@
 <div id="hasKey-procs-all">
   <div id="hasKey,TomlValueRef,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#hasKey%2CTomlValueRef%2Cstring"><span class="Identifier">hasKey</span></a><span class="Other">(</span><span class="Identifier">node</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Checks if <tt class="docutils literal"><span class="pre"><span class="Identifier">key</span></span></tt> exists in <tt class="docutils literal"><span class="pre"><span class="Identifier">node</span></span></tt>.
@@ -870,7 +806,7 @@
 </div>
 <div id="len-procs-all">
   <div id="len,TomlValueRef">
-  <dt><pre><span class="Keyword">proc</span> <a href="#len%2CTomlValueRef"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#len%2CTomlValueRef"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     If <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt> is a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Array</span></span></tt>, it returns the number of elements. If <tt class="docutils literal"><span class="pre"><span class="Identifier">n</span></span></tt> is a <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Table</span></span></tt>, it returns the number of pairs. Else it returns 0.
@@ -881,7 +817,7 @@
 </div>
 <div id="newTArray-procs-all">
   <div id="newTArray">
-  <dt><pre><span class="Keyword">proc</span> <a href="#newTArray"><span class="Identifier">newTArray</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#newTArray"><span class="Identifier">newTArray</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Array</span> <span class="Identifier">TomlValueRef</span></span></tt>
@@ -892,7 +828,7 @@
 </div>
 <div id="newTBool-procs-all">
   <div id="newTBool,bool">
-  <dt><pre><span class="Keyword">proc</span> <a href="#newTBool%2Cbool"><span class="Identifier">newTBool</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#newTBool%2Cbool"><span class="Identifier">newTBool</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Bool</span> <span class="Identifier">TomlValueRef</span></span></tt>.
@@ -903,7 +839,7 @@
 </div>
 <div id="newTFloat-procs-all">
   <div id="newTFloat,float">
-  <dt><pre><span class="Keyword">proc</span> <a href="#newTFloat%2Cfloat"><span class="Identifier">newTFloat</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#newTFloat%2Cfloat"><span class="Identifier">newTFloat</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Float</span> <span class="Identifier">TomlValueRef</span></span></tt>.
@@ -914,7 +850,7 @@
 </div>
 <div id="newTInt-procs-all">
   <div id="newTInt,int64">
-  <dt><pre><span class="Keyword">proc</span> <a href="#newTInt%2Cint64"><span class="Identifier">newTInt</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">int64</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#newTInt%2Cint64"><span class="Identifier">newTInt</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">int64</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Int</span> <span class="Identifier">TomlValueRef</span></span></tt>.
@@ -925,7 +861,7 @@
 </div>
 <div id="newTNull-procs-all">
   <div id="newTNull">
-  <dt><pre><span class="Keyword">proc</span> <a href="#newTNull"><span class="Identifier">newTNull</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#newTNull"><span class="Identifier">newTNull</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">JNull</span> <span class="Identifier">TomlValueRef</span></span></tt>.
@@ -936,7 +872,7 @@
 </div>
 <div id="newTString-procs-all">
   <div id="newTString,string">
-  <dt><pre><span class="Keyword">proc</span> <a href="#newTString%2Cstring"><span class="Identifier">newTString</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#newTString%2Cstring"><span class="Identifier">newTString</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">String</span> <span class="Identifier">TomlValueRef</span></span></tt>.
@@ -947,7 +883,7 @@
 </div>
 <div id="newTTable-procs-all">
   <div id="newTTable">
-  <dt><pre><span class="Keyword">proc</span> <a href="#newTTable"><span class="Identifier">newTTable</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+  <dt><pre><span class="Keyword">proc</span> <a href="#newTTable"><span class="Identifier">newTTable</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Creates a new <tt class="docutils literal"><span class="pre"><span class="Identifier">TomlValueKind</span><span class="Operator">.</span><span class="Identifier">Table</span> <span class="Identifier">TomlValueRef</span></span></tt>
@@ -959,8 +895,8 @@
 <div id="parseFile-procs-all">
   <div id="parseFile,File,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#parseFile%2CFile%2Cstring"><span class="Identifier">parseFile</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">;</span> <span class="Identifier">fileName</span><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">TomlError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Parses a file of TOML formatted data into a TOML table. The optional filename is used for error messages.
@@ -969,8 +905,8 @@
 </div>
 <div id="parseFile,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#parseFile%2Cstring"><span class="Identifier">parseFile</span></a><span class="Other">(</span><span class="Identifier">fileName</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">TomlError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Parses the file found at fileName with TOML formatted data into a TOML table.
@@ -982,8 +918,8 @@
 <div id="parseStream-procs-all">
   <div id="parseStream,,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#parseStream%2C%2Cstring"><span class="Identifier">parseStream</span></a><span class="Other">(</span><span class="Identifier">inputStream</span><span class="Other">:</span> <span class="Identifier">streams</span><span class="Other">.</span><span class="Identifier">Stream</span><span class="Other">;</span> <span class="Identifier">fileName</span><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">TomlError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Parses a stream of TOML formatted data into a TOML table. The optional filename is used for error messages.
@@ -995,8 +931,8 @@
 <div id="parseString-procs-all">
   <div id="parseString,string,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#parseString%2Cstring%2Cstring"><span class="Identifier">parseString</span></a><span class="Other">(</span><span class="Identifier">tomlStr</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">fileName</span><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">TomlError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">KeyError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Parses a string of TOML formatted data into a TOML table. The optional filename is used for error messages.
@@ -1008,7 +944,7 @@
 <div id="toJson-procs-all">
   <div id="toJson,TomlTableRef">
   <dt><pre><span class="Keyword">proc</span> <a href="#toJson%2CTomlTableRef"><span class="Identifier">toJson</span></a><span class="Other">(</span><span class="Identifier">table</span><span class="Other">:</span> <a href="index.html#TomlTableRef"><span class="Identifier">TomlTableRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsonNode</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Converts a TOML table to a JSON node. This uses the format specified in the validation suite for it's output: <a class="reference external" href="https://github.com/BurntSushi/toml-test#example-json-encoding">https://github.com/BurntSushi/toml-test#example-json-encoding</a>
@@ -1017,10 +953,10 @@
 </div>
 <div id="toJson,TomlValueRef">
   <dt><pre><span class="Keyword">proc</span> <a href="#toJson%2CTomlValueRef"><span class="Identifier">toJson</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">JsonNode</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    Converts a TOML value to a JSON node. This uses the format specified in the validation suite for it's output: <a class="reference external" href="https://github.com/BurntSushi/toml-test#example-json-encoding">https://github.com/BurntSushi/toml-test#example-json-encoding</a>
+    
     
   </dd>
 </div>
@@ -1029,7 +965,7 @@
 <div id="toTomlString-procs-all">
   <div id="toTomlString,TomlTableRef,string">
   <dt><pre><span class="Keyword">proc</span> <a href="#toTomlString%2CTomlTableRef%2Cstring"><span class="Identifier">toTomlString</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <a href="index.html#TomlTableRef"><span class="Identifier">TomlTableRef</span></a><span class="Other">;</span> <span class="Identifier">parents</span> <span class="Other">=</span> <span class="StringLit">&quot;&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Converts a TOML table to a TOML formatted string for output to a file.
@@ -1038,10 +974,10 @@
 </div>
 <div id="toTomlString,TomlValueRef">
   <dt><pre><span class="Keyword">proc</span> <a href="#toTomlString%2CTomlValueRef"><span class="Identifier">toTomlString</span></a><span class="Other">(</span><span class="Identifier">value</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    Converts a TOML value to a TOML formatted string for output to a file.
+    
     
   </dd>
 </div>
@@ -1050,7 +986,7 @@
 <div id="{}-procs-all">
   <div id="{},TomlValueRef,varargs[string]">
   <dt><pre><span class="Keyword">proc</span> <a href="#%7B%7D%2CTomlValueRef%2Cvarargs%5Bstring%5D"><span class="Identifier">`{}`</span></a><span class="Other">(</span><span class="Identifier">node</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">keys</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Traverses the node and gets the given value. If any of the keys do not exist, returns <tt class="docutils literal"><span class="pre">nil</span></tt>. Also returns <tt class="docutils literal"><span class="pre">nil</span></tt> if one of the intermediate data structures is not an object.
@@ -1062,7 +998,7 @@
 <div id="{}=-procs-all">
   <div id="{}=,TomlValueRef,varargs[string],TomlValueRef">
   <dt><pre><span class="Keyword">proc</span> <a href="#%7B%7D%3D%2CTomlValueRef%2Cvarargs%5Bstring%5D%2CTomlValueRef"><span class="Identifier">`{}=`</span></a><span class="Other">(</span><span class="Identifier">node</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">;</span> <span class="Identifier">keys</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <a href="index.html#TomlValueRef"><span class="Identifier">TomlValueRef</span></a><span class="Other">)</span> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> </span><span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
     Traverses the node and tries to set the value at the given location to <tt class="docutils literal"><span class="pre">value</span></tt>. If any of the keys are missing, they are added.
@@ -1139,10 +1075,13 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2022-08-16 09:22:46 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2023-05-26 13:42:58 UTC</small>
       </div>
     </div>
   </div>
   
+  <!-- Google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,600,900' rel='stylesheet' type='text/css'/>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 </body>
 </html>
